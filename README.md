@@ -1,4 +1,4 @@
-# AppUpdateLib 自动升级模块
+# AppUpdateLib
 
 Usage
 
