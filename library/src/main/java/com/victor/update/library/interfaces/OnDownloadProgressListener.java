@@ -5,6 +5,6 @@ import com.victor.update.library.data.UpdateData;
 /**
  * Created by victor on 2016/9/2.
  */
-public interface OnDownloadCompeleteListener {
-    void onDownloadComplete(UpdateData info);
+public interface OnDownloadProgressListener {
+    void onDownloadProgress(UpdateData info);
 }
