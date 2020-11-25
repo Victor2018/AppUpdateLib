@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="UPDATE_URL_KEY" android:value="http://api.bq04.com/apps/latest/5f2bdc5223389f6a582842a2?api_token=5826c9a4bc7c9a766e9145b8c4f91201"/>
+        <meta-data
+            android:name="UPDATE_URL_KEY"
+            android:value="http://api.bq04.com/apps/latest/5f2bdc5223389f6a582842a2?api_token=5826c9a4bc7c9a766e9145b8c4f91201"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

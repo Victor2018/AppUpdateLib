@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -60,19 +61,19 @@ public class FileUtils {
      * @return
      */
     public static File getExRootFolder(Context context) {
-        File rootFolder = null;
-        if (hasMountedSDCard()) {
-            rootFolder = new File(getRootDir(context) + File.separator + ROOT_FOLDER);
-            if (!rootFolder.exists())
-                rootFolder.mkdirs();
-        }
+        File rootFolder = new File(getRootDir(context) + File.separator + ROOT_FOLDER);
+        Log.e("FileUtils","getExRootFolder-rootFolder = " + rootFolder);
+        Log.e("FileUtils","getExRootFolder-rootFolder-exists = " + rootFolder.exists());
+        if (!rootFolder.exists())
+            rootFolder.mkdirs();
         return rootFolder;
     }
 
     public static String getRootDir(Context context) {
         String path = Environment.getExternalStorageDirectory().getAbsolutePath();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            path = context.getFilesDir().getAbsolutePath();
+//            path = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
+            path = context.getExternalFilesDir(null).getAbsolutePath();
         }
         return path;
     }

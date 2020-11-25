@@ -28,21 +28,8 @@ public class InstallUtil {
     public static final int UNKNOWN_APP_SOURCES_REQUEST_CODE = 4;
 
     public static void installApk (Activity activity,String fileName) {
-        Log.e(TAG,"installApk()......");
+        Log.e(TAG,"installApk()......fileName = " + fileName);
         if (activity == null) return;
-        //兼容8.0
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            // 判断是否有权限
-            boolean haveInstallPermission = activity.getPackageManager().canRequestPackageInstalls();
-            Log.e(TAG,"installApk()......haveInstallPermission = " + haveInstallPermission);
-            if(!haveInstallPermission){
-                //权限没有打开则提示用户去手动打开
-                Uri packageUri = Uri.parse("package:" + activity.getPackageName());
-                Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, packageUri);
-                activity.startActivityForResult(intent, UNKNOWN_APP_SOURCES_REQUEST_CODE);
-                return;
-            }
-        }
 
         File file = new File(fileName);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
