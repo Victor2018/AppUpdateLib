@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AppUpdateLib.iml" filepath="$PROJECT_DIR$/AppUpdateLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AppUpdateLib.iml" filepath="$PROJECT_DIR$/.idea/AppUpdateLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppUpdateLib.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppUpdateLib.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/AppUpdateLib.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/AppUpdateLib.library.iml" />
     </modules>
   </component>
 </project>

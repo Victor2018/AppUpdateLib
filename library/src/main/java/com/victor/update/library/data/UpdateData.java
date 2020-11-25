@@ -11,6 +11,16 @@ public class UpdateData {
     private String url;
     private int progress;
 
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    private String path;
+
     public int getProgress() {
         return progress;
     }
